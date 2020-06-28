@@ -28,6 +28,8 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "@rebass/preset": "^4.0.5",
+    "emotion-theming": "^10.0.27",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
