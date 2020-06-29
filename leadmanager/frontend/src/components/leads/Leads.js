@@ -3,13 +3,18 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { getLeads, deleteLead } from '../../actions/leads'
 import Table from '../layout/Table'
+import {
+    Box
+} from 'rebass'
 
 var _ = require('lodash');
 
 export class Leads extends Component {
 
     static propTypes = {
-        leads: PropTypes.array.isRequired
+        leads: PropTypes.array.isRequired,
+        getLeads: PropTypes.func.isRequired,
+        deleteLead: PropTypes.func.isRequired,
     }
 
     componentDidMount() {
@@ -18,7 +23,7 @@ export class Leads extends Component {
 
     render() {
         return (
-            <Fragment>
+            <Box p={10} m={20}>
                 <h2>Leads</h2>
 
                 <Table
@@ -46,8 +51,7 @@ export class Leads extends Component {
                         )
                     }
                 />
-
-            </Fragment>
+            </Box>
         )
     }
 }

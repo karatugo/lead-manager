@@ -10,7 +10,7 @@ const Table = ({ columns, data }) => (
         <Flex flexWrap="wrap">
             {data.map((item, index) => {
                 return (
-                    <Box px={2} width={1 / columns}>
+                    <Box key={item} px={2} width={1 / columns}>
                         <Text
                             p={1}
                             style={{
